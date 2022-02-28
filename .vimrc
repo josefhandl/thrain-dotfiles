@@ -4,6 +4,9 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 set number
 highlight LineNr ctermfg=DarkGrey ctermbg=None
 
+set colorcolumn=80,120
+highlight ColorColumn ctermbg=DarkGrey
+
 " Declare the list of plugins.
 "Plug 'tpope/vim-sensible'
 "Plug 'junegunn/iseoul256.vim'
