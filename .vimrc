@@ -24,6 +24,8 @@ let g:airline_statusline_ontop=0
 
 let g:airline_left_sep = "\uE0BC"
 let g:airline_right_sep = "\uE0BA"
+let g:airline_left_alt_sep = "\uE0BD"
+let g:airline_right_alt_sep = "\uE0BB"
 
 "function! AirlineInit()
 "let g:airline_section_a = airline#section#create(['mode','branch'])
