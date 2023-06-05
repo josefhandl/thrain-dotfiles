@@ -25,6 +25,8 @@ HISTFILE=~/.zsh_history
 autoload -Uz compinit
 compinit
 
+PATH="${PATH}:/home/josef/bin:/home/josef/app:/home/josef/.local/bin"
+
 alias ll='ls -laFh --color'
 alias ..='cd ..'
 
