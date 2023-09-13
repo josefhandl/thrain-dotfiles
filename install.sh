@@ -1,6 +1,6 @@
 #!/bin/bash
 
-change_shell () {
+change_shell_failed () {
 	echo "Changing the default shell failed. You have to change it manually and start this script again"
 	exit 2
 }
@@ -10,13 +10,15 @@ if [ ! -e "/bin/zsh" ]; then
 	exit 1
 fi
 
-chsh -s /bin/zsh || change_shell
+## Try to change the default shell to the zsh
+#chsh -s /bin/zsh || change_shell_failed
 
 sleep 1
 
-if [ "/bin/zsh" != $(cat /etc/passwd | grep $USER | cut -d":" -f7) ]; then
-	change_shell
-fi
+## Check if the zsh is set as a default shell
+#if [ "/bin/zsh" != $(cat /etc/passwd | grep $USER | cut -d":" -f7) ]; then
+#	change_shell
+#fi
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
