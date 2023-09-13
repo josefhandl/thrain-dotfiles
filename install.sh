@@ -40,3 +40,6 @@ sudo ln -s "$ABS_PATH/throttled/throttled.conf" /etc/throttled.conf
 
 rm ~/.zshrc
 ln -s "$ABS_PATH/.zshrc" ~/.zshrc
+
+# Install vim plugins
+vim +'PlugUpdate --sync' +qa
