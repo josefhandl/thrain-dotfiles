@@ -43,3 +43,6 @@ ln -s "$ABS_PATH/.zshrc" ~/.zshrc
 
 # Install vim plugins
 vim +'PlugUpdate --sync' +qa
+
+# Install K9s
+curl -sS https://webinstall.dev/k9s | bash
