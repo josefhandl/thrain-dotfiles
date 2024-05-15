@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Start Win 11 Thror
+Exec=virsh start win11-thror
+Icon=/home/josef/Pictures/icons/windows-11-icon.png
+Terminal=false
+Type=Application
+Categories=Development;
+Keywords=Windows;Win;Win11;Thror;start;
