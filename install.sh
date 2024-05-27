@@ -32,9 +32,6 @@ ln -s "$ABS_PATH/.vimrc" ~/.vimrc
 ln -s "$ABS_PATH/.p10k.zsh" ~/.p10k.zsh
 ln -s "$ABS_PATH/ssh-config" ~/.ssh/config
 
-sudo mv /etc/logid.cfg logid.cfg.original || true
-sudo ln -s "$ABS_PATH/logid/logid.cfg" /etc/logid.cfg
-
 rm ~/.zshrc
 ln -s "$ABS_PATH/.zshrc" ~/.zshrc
 
