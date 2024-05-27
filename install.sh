@@ -35,9 +35,6 @@ ln -s "$ABS_PATH/ssh-config" ~/.ssh/config
 sudo mv /etc/logid.cfg logid.cfg.original || true
 sudo ln -s "$ABS_PATH/logid/logid.cfg" /etc/logid.cfg
 
-sudo mv /etc/throttled.conf throttled.conf.original || true
-sudo ln -s "$ABS_PATH/throttled/throttled.conf" /etc/throttled.conf
-
 rm ~/.zshrc
 ln -s "$ABS_PATH/.zshrc" ~/.zshrc
 
