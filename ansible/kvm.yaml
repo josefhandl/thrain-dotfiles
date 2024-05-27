@@ -1,0 +1,31 @@
+---
+- name: Install KVM and QEMU on Debian
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Update the apt package index
+      apt:
+        update_cache: yes
+
+    - name: Install KVM and related packages
+      apt:
+        name:
+          - qemu-kvm
+          - libvirt-daemon-system
+          - libvirt-clients
+          - bridge-utils
+          - virt-manager
+        state: present
+
+    - name: Ensure libvirtd service is enabled and started
+      service:
+        name: libvirtd
+        enabled: yes
+        state: started
+
+    - name: Add the current user to the libvirt and kvm groups
+      user:
+        name: "josef"
+        groups: libvirt
+        append: yes
+

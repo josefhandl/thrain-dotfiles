@@ -1,0 +1,44 @@
+
+# Separate files:
+#-------------------
+# Docker
+# KVM/Qemu
+
+
+# Basics
+curl
+wget
+vim
+zsh
+htop
+git
+
+# Python
+python3
+python3-pip
+python3-venv
+
+# DevOps tools
+ansible
+meld
+
+# Diag/useful tools
+neofetch
+smartmontools
+lm-sensors
+
+# Basic services / modules
+openssh-server
+openssh-client
+samba
+zfsutils-linux
+
+# Network testing
+nmap
+aircrack-ng
+
+# GUI applications
+vlc
+okular
+chromium
+prusa-slicer
