@@ -21,6 +21,13 @@ python3-venv
 # DevOps tools
 ansible
 meld
+cmake
+make
+# neonbench:
+clang
+ocl-icd-opencl-dev
+opencl-clhpp-headers
+mesa-opencl-icd
 
 # Diag/useful tools
 neofetch
