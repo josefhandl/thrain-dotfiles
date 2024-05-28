@@ -1,0 +1,25 @@
+
+# Interface
+/org/gnome/desktop/interface/color-scheme 'prefer-dark'
+
+# Info
+/org/gnome/desktop/calendar/show-weekdate true
+/org/gnome/desktop/interface/clock-show-seconds true
+/org/gnome/desktop/interface/clock-show-weekday true
+/org/gnome/desktop/interface/show-battery-percentage true
+
+# Disable auto open activities on mouse hover
+/org/gnome/desktop/interface/enable-hot-corners false
+
+# Notifications on lock screen
+/org/gnome/desktop/interface/show-in-lock-screen false
+
+/org/gnome/desktop/peripherals/touchpad/tap-to-click true
+
+/org/gnome/desktop/session/idle-delay 9000
+/org/gnome/desktop/wm/keybindings/switch-windows ['<Alt>Tab']
+/org/gnome/desktop/wm/preferences/button-layout 'appmenu:minimize,maximize,close'
+
+# Multitasking
+/org/gnome/shell/app-switcher/current-workspace-only true
+
