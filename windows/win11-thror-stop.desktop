@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Name=Stop Win 11 Thror
-Exec=virsh shutdown win11-thror --mode acpi
+Exec=env LIBVIRT_DEFAULT_URI=qemu:///system virsh shutdown win11-thror --mode acpi
 Icon=/home/josef/Pictures/icons/windows-11-icon-red.png
 Terminal=false
 Type=Application
