@@ -23,9 +23,14 @@
         enabled: yes
         state: started
 
-    - name: Add the current user to the libvirt and kvm groups
-      user:
-        name: "josef"
-        groups: libvirt
-        append: yes
+    - name: Get username of user with UID 1000
+      shell: "getent passwd 1000 | cut -d: -f1"
+      register: username_result
+      changed_when: false
+      check_mode: no
 
+    - name: Add user with UID 1000 to the libvirt and kvm groups
+      user:
+        name: "{{ username_result.stdout }}"
+        groups: libvirt, kvm
+        append: yes
