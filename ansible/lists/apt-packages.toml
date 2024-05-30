@@ -48,6 +48,7 @@ aircrack-ng
 
 # SDR
 rtl-433
+gqrx-sdr
 
 # GUI applications
 vlc
