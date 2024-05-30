@@ -24,6 +24,7 @@ meld
 cmake
 make
 # neonbench:
+clinfo
 clang
 ocl-icd-opencl-dev
 opencl-clhpp-headers
@@ -45,6 +46,9 @@ zfsutils-linux
 nmap
 aircrack-ng
 
+# SDR
+rtl-433
+
 # GUI applications
 vlc
 okular
@@ -52,3 +56,4 @@ chromium
 prusa-slicer
 blender
 hugin
+wireshark

@@ -23,3 +23,9 @@
 # Multitasking
 /org/gnome/shell/app-switcher/current-workspace-only true
 
+# Power
+/org/gnome/settings-daemon/plugins/power/idle-dim false
+/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-type 'nothing'
+/org/gnome/settings-daemon/plugins/power/sleep-inactive-battery-type 'nothing'
+/org/gnome/settings-daemon/plugins/power/power-button-action 'suspend'
+
