@@ -1,0 +1,32 @@
+---
+- name: Setup Samba for Thror (Win 11) share
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Install Samba
+      apt:
+        name: "samba"
+        state: present
+
+    - name: Check if the original smb.conf backup exists
+      stat:
+        path: /etc/samba/smb.conf.backup
+      register: smb_conf_backup
+
+    - name: Backup the original smb.conf if backup does not exist
+      copy:
+        src: /etc/samba/smb.conf
+        dest: /etc/samba/smb.conf.backup
+        backup: yes
+      when: not smb_conf_backup.stat.exists
+
+    - name: Copy the new smb.conf
+      copy:
+        src: configs/smb.conf
+        dest: /etc/samba/smb.conf
+
+    - name: Restart Samba service
+      service:
+        name: smbd
+        state: restarted
+

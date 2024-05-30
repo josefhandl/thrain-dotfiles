@@ -1,0 +1,12 @@
+---
+- name: Install VS Code extensions from external file
+  hosts: localhost
+  tasks:
+    - name: Read the list of extensions from file
+      slurp:
+        src: vscode-extensions-list.toml
+      register: extensions_content
+
+    - name: Install extensions
+      shell: "code --install-extension {{ item }}"
+      loop: "{{ extensions_content['content'] | b64decode | split('\n') | reject('match', '^(#.*)?\\s*$') }}"
