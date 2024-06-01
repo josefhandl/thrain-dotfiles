@@ -13,6 +13,10 @@ zsh
 htop
 git
 
+# UFW
+ufw
+gufw
+
 # Python
 python3
 python3-pip
