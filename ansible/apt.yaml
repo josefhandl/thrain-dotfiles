@@ -5,7 +5,7 @@
   tasks:
     - name: Read the list of packages from file
       slurp:
-        src: apt-packages.toml
+        src: lists/apt-packages.toml
       register: packages_content
 
     - name: Install packages

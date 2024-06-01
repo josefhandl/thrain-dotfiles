@@ -28,12 +28,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 ABS_PATH="$(pwd)/$(dirname "$0")"
 
-ln -s "$ABS_PATH/.vimrc" ~/.vimrc
-ln -s "$ABS_PATH/.p10k.zsh" ~/.p10k.zsh
-ln -s "$ABS_PATH/ssh-config" ~/.ssh/config
+ln -s "$ABS_PATH/terminal/.vimrc" ~/.vimrc
+ln -s "$ABS_PATH/terminal/.p10k.zsh" ~/.p10k.zsh
+ln -s "$ABS_PATH/terminal/ssh-config" ~/.ssh/config
 
 rm ~/.zshrc
-ln -s "$ABS_PATH/.zshrc" ~/.zshrc
+ln -s "$ABS_PATH/terminal/.zshrc" ~/.zshrc
 
 # Install vim plugins
 vim +'PlugUpdate --sync' +qa
