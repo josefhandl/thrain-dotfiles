@@ -30,7 +30,6 @@ ABS_PATH="$(pwd)/$(dirname "$0")"
 
 ln -s "$ABS_PATH/terminal/.vimrc" ~/.vimrc
 ln -s "$ABS_PATH/terminal/.p10k.zsh" ~/.p10k.zsh
-ln -s "$ABS_PATH/terminal/ssh-config" ~/.ssh/config
 
 rm ~/.zshrc
 ln -s "$ABS_PATH/terminal/.zshrc" ~/.zshrc
