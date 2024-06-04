@@ -29,6 +29,8 @@ PATH="${PATH}:/home/josef/bin:/home/josef/app:/home/josef/.local/bin"
 
 alias ll='ls -laFh --color'
 alias ..='cd ..'
+alias vimssh='vim ~/.ssh/config'
+alias vimkube='vim ~/.kube/config'
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
