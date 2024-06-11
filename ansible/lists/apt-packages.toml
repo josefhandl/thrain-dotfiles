@@ -54,6 +54,9 @@ aircrack-ng
 rtl-433
 gqrx-sdr
 
+# Logic analyzer
+sigrok
+
 # GUI applications
 vlc
 okular
