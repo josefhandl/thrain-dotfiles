@@ -7,3 +7,4 @@ ms-vscode.makefile-tools
 eamodio.gitlens
 golang.Go
 oderwat.indent-rainbow
+rust-lang.rust-analyzer
