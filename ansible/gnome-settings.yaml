@@ -4,7 +4,7 @@
   tasks:
     - name: Read the list of settings from file
       slurp:
-        src: gnome-settings-list.toml
+        src: lists/gnome-settings-list.toml
       register: settings_content
 
     - name: Install dconf (with GUI) with apt
