@@ -1,5 +1,8 @@
 
 # Interface
+#--------------------
+
+# Theme
 /org/gnome/desktop/interface/color-scheme 'prefer-dark'
 
 # Info
@@ -14,18 +17,74 @@
 # Notifications on lock screen
 /org/gnome/desktop/interface/show-in-lock-screen false
 
+# Touchpad
 /org/gnome/desktop/peripherals/touchpad/tap-to-click true
 
-/org/gnome/desktop/session/idle-delay 9000
+
+# Workspaces and multitasking
+#----------------------------------
+
 /org/gnome/desktop/wm/keybindings/switch-windows ['<Alt>Tab']
+
+# Buttons on window
 /org/gnome/desktop/wm/preferences/button-layout 'appmenu:minimize,maximize,close'
 
-# Multitasking
+# Fixed 9 workspaces
+/org/gnome/mutter/dynamic-workspaces false
+/org/gnome/desktop/wm/preferences/num-workspaces 9
+
+# Running apps visibility
 /org/gnome/shell/app-switcher/current-workspace-only true
 
-# Power
+# Disable switch-to-application on order to use the shortcuts for workspace switching
+/org/gnome/shell/keybindings/switch-to-application-1 @as []
+/org/gnome/shell/keybindings/switch-to-application-2 @as []
+/org/gnome/shell/keybindings/switch-to-application-3 @as []
+/org/gnome/shell/keybindings/switch-to-application-4 @as []
+/org/gnome/shell/keybindings/switch-to-application-5 @as []
+/org/gnome/shell/keybindings/switch-to-application-6 @as []
+/org/gnome/shell/keybindings/switch-to-application-7 @as []
+/org/gnome/shell/keybindings/switch-to-application-8 @as []
+/org/gnome/shell/keybindings/switch-to-application-9 @as []
+
+# Use the saved shortcuts for workspace switching
+# WARNING: In order to use the following shortcuts the hot-keys of the dock must be disabled! Look below
+/org/gnome/desktop/wm/keybindings/switch-to-workspace-1 ['<Super>1']
+/org/gnome/desktop/wm/keybindings/switch-to-workspace-2 ['<Super>2']
+/org/gnome/desktop/wm/keybindings/switch-to-workspace-3 ['<Super>3']
+/org/gnome/desktop/wm/keybindings/switch-to-workspace-4 ['<Super>4']
+/org/gnome/desktop/wm/keybindings/switch-to-workspace-5 ['<Super>5']
+/org/gnome/desktop/wm/keybindings/switch-to-workspace-6 ['<Super>6']
+/org/gnome/desktop/wm/keybindings/switch-to-workspace-7 ['<Super>7']
+/org/gnome/desktop/wm/keybindings/switch-to-workspace-8 ['<Super>8']
+/org/gnome/desktop/wm/keybindings/switch-to-workspace-9 ['<Super>9']
+
+
+# Power and sleep management
+#---------------------------------
+/org/gnome/desktop/session/idle-delay 9000
 /org/gnome/settings-daemon/plugins/power/idle-dim false
 /org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-type 'nothing'
 /org/gnome/settings-daemon/plugins/power/sleep-inactive-battery-type 'nothing'
 /org/gnome/settings-daemon/plugins/power/power-button-action 'suspend'
+
+# Extensions
+#------------------
+
+# Enable extensions
+/org/gnome/shell/disable-user-extensions false
+
+# Set dash-to-dock extension
+/org/gnome/shell/extensions/dash-to-dock/background-opacity 0.8
+/org/gnome/shell/extensions/dash-to-dock/click-action 'focus-minimize-or-appspread'
+/org/gnome/shell/extensions/dash-to-dock/custom-theme-shrink true
+/org/gnome/shell/extensions/dash-to-dock/dash-max-icon-size 48
+/org/gnome/shell/extensions/dash-to-dock/dock-position 'LEFT'
+/org/gnome/shell/extensions/dash-to-dock/extend-height true
+/org/gnome/shell/extensions/dash-to-dock/multi-monitor true
+/org/gnome/shell/extensions/dash-to-dock/running-indicator-style 'SEGMENTED'
+/org/gnome/shell/extensions/dash-to-dock/show-trash false
+/org/gnome/shell/extensions/dash-to-dock/transparency-mode 'DYNAMIC'
+# WARNING: the following setting is importand to make the switch-to-workspace shortcuts working! Look above
+/org/gnome/shell/extensions/dash-to-dock/hot-keys false
 
