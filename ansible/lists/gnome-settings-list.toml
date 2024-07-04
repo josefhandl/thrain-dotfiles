@@ -27,6 +27,7 @@
 # Workspaces and multitasking
 #----------------------------------
 
+/org/gnome/desktop/wm/keybindings/switch-applications ['<Super>Tab']
 /org/gnome/desktop/wm/keybindings/switch-windows ['<Alt>Tab']
 
 # Buttons on window
