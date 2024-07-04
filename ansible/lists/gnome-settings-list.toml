@@ -17,6 +17,9 @@
 # Notifications on lock screen
 /org/gnome/desktop/interface/show-in-lock-screen false
 
+# Disable modal windows attach to the parrent window
+/org/gnome/mutter/attach-modal-dialogs false
+
 # Touchpad
 /org/gnome/desktop/peripherals/touchpad/tap-to-click true
 
