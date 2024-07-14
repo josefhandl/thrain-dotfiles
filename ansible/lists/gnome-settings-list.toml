@@ -66,7 +66,7 @@
 
 # Power and sleep management
 #---------------------------------
-/org/gnome/desktop/session/idle-delay 9000
+/org/gnome/desktop/session/idle-delay 0
 /org/gnome/settings-daemon/plugins/power/idle-dim false
 /org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-type 'nothing'
 /org/gnome/settings-daemon/plugins/power/sleep-inactive-battery-type 'nothing'
