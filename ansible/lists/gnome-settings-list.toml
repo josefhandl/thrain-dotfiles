@@ -27,6 +27,8 @@
 # Workspaces and multitasking
 #----------------------------------
 
+/org/gnome/mutter/workspaces-only-on-primary false
+
 /org/gnome/desktop/wm/keybindings/switch-applications ['<Super>Tab']
 /org/gnome/desktop/wm/keybindings/switch-windows ['<Alt>Tab']
 
