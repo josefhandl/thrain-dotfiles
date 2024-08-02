@@ -91,6 +91,7 @@
 /org/gnome/shell/extensions/dash-to-dock/running-indicator-style 'SEGMENTED'
 /org/gnome/shell/extensions/dash-to-dock/show-trash false
 /org/gnome/shell/extensions/dash-to-dock/transparency-mode 'DYNAMIC'
+/org/gnome/shell/extensions/dash-to-dock/require-pressure-to-show false
 # WARNING: the following setting is importand to make the switch-to-workspace shortcuts working! Look above
 /org/gnome/shell/extensions/dash-to-dock/hot-keys false
 
