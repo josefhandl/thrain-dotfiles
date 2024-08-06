@@ -1,0 +1,65 @@
+
+# Separate files:
+#-------------------
+# Docker
+# KVM/Qemu
+
+
+# Basics
+curl
+wget
+vim
+zsh
+htop
+git
+
+# UFW
+ufw
+gufw
+
+# Python
+python
+python-pip
+python-virtualenv
+
+# DevOps tools
+ansible
+meld
+cmake
+make
+# neonbench:
+clinfo
+clang
+opencl-icd-loader
+opencl-headers
+
+# Diag/useful tools
+neofetch
+mesa-demos
+smartmontools
+lm_sensors
+
+# Basic services / modules
+openssh
+samba
+zfs
+
+# Network testing
+nmap
+aircrack-ng
+
+# SDR
+rtl_433
+gqrx
+
+# Logic analyzer (Sigrok)
+pulseview
+
+# GUI applications
+vlc
+okular
+chromium
+prusa-slicer
+blender
+hugin
+wireshark-qt

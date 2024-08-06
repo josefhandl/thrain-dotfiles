@@ -4,7 +4,7 @@
   tasks:
     - name: Read the list of extensions from file
       slurp:
-        src: vscode-extensions-list.toml
+        src: lists/vscode-extensions-list.toml
       register: extensions_content
 
     - name: Install extensions
