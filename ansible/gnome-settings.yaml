@@ -7,10 +7,17 @@
         src: lists/gnome-settings-list.toml
       register: settings_content
 
-    - name: Install dconf (with GUI) with apt
+    - name: Install dconf (with GUI) (Debian family)
       apt:
         name: "dconf-editor"
         state: present
+      when: ansible_os_family == "Debian"
+
+    - name: Install dconf (with GUI) (Arch Linux)
+      pacman:
+        name: "dconf-editor"
+        state: present
+      when: ansible_os_family == "Archlinux"
 
     - name: Apply Gnome settings
       shell: dconf write {{ item.split(' ')[0] }} "{{ item.split(' ', 1)[1] }}"

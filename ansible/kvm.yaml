@@ -3,11 +3,12 @@
   hosts: localhost
   become: yes
   tasks:
-    - name: Update the apt package index
+    - name: Update the apt package index (Debian family)
       apt:
         update_cache: yes
+      when: ansible_os_family == "Debian"
 
-    - name: Install KVM and related packages
+    - name: Install KVM and related packages (Debian family)
       apt:
         name:
           - qemu-kvm
@@ -16,6 +17,16 @@
           - bridge-utils
           - virt-manager
         state: present
+      when: ansible_os_family == "Debian"
+
+    - name: Install KVM and related packages (Arch Linux)
+      pacman:
+        name:
+          - qemu-full
+          - bridge-utils
+          - virt-manager
+        state: present
+      when: ansible_os_family == "Archlinux"
 
     - name: Ensure libvirtd service is enabled and started
       service:

@@ -3,10 +3,17 @@
   hosts: localhost
   become: yes
   tasks:
-    - name: Install Samba
+    - name: Install Samba (Debian family)
       apt:
         name: "samba"
         state: present
+      when: ansible_os_family == "Debian"
+
+    - name: Install Samba (Arch Linux)
+      pacman:
+        name: "samba"
+        state: present
+      when: ansible_os_family == "Archlinux"
 
     - name: Check if the original smb.conf backup exists
       stat:
