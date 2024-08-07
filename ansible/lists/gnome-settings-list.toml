@@ -35,9 +35,9 @@
 # Buttons on window
 /org/gnome/desktop/wm/preferences/button-layout 'appmenu:minimize,maximize,close'
 
-# Fixed 9 workspaces
+# Fixed 6 workspaces
 /org/gnome/mutter/dynamic-workspaces false
-/org/gnome/desktop/wm/preferences/num-workspaces 9
+/org/gnome/desktop/wm/preferences/num-workspaces 6
 
 # Running apps visibility
 /org/gnome/shell/app-switcher/current-workspace-only true
