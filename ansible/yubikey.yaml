@@ -1,0 +1,32 @@
+---
+- name: Configure Yubikey (or alternative USB key) for sudo authentication
+  hosts: localhost
+  become: true
+
+  tasks:
+  - name: Install required packages (Debian family)
+    apt:
+      name: ['libpam-u2f', 'pamu2fcfg']
+      state: present
+    when: ansible_os_family == "Debian"
+
+  - name: Install required packages (Arch Linux)
+    pacman:
+      name: ['pam-u2f', 'yubikey-manager']
+      state: present
+    when: ansible_os_family == "Archlinux"
+
+  - name: Get hostname
+    shell: hostname
+    register: hostname
+
+  - name: Do something
+    shell: 'pamu2fcfg -u josef -opam://{{ hostname.stdout }} -ipam://{{ hostname.stdout }} > /etc/u2f_mappings'
+
+  - name: Set authentication for sudo
+    lineinfile:
+      path: /etc/pam.d/sudo
+      line: 'auth       sufficient pam_u2f.so origin=pam://{{ hostname.stdout }} appid=pam://{{ hostname.stdout }} authfile=/etc/u2f_mappings cue'
+      insertafter: '^.*PAM.*$'
+      firstmatch: yes
+
