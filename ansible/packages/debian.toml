@@ -49,6 +49,7 @@ zfsutils-linux
 # Network testing
 nmap
 aircrack-ng
+netcat
 
 # SDR
 rtl-433

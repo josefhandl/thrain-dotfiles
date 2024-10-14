@@ -47,6 +47,7 @@ zfs
 # Network testing
 nmap
 aircrack-ng
+netcat
 
 # SDR
 rtl_433
