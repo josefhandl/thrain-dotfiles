@@ -29,10 +29,10 @@
       when: ansible_os_family == "Archlinux"
 
     - name: Ensure libvirtd service is enabled and started
-      service:
+      systemd_service:
         name: libvirtd
-        enabled: yes
-        state: started
+        enabled: true
+        state: restarted
 
     - name: Get username of user with UID 1000
       shell: "getent passwd 1000 | cut -d: -f1"

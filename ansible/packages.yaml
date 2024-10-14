@@ -15,9 +15,16 @@
       register: packages_content
       when: ansible_os_family == "Archlinux"
 
-    - name: Install packages
+    - name: Install packages (Debian family)
+      apt:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ packages_content['content'] | b64decode | split('\n') | reject('match', '^(#.*)?\\s*$') }}"
+      when: ansible_os_family == "Debian"
+
+    - name: Install packages (Arch Linux)
       pacman:
         name: "{{ item }}"
         state: present
       loop: "{{ packages_content['content'] | b64decode | split('\n') | reject('match', '^(#.*)?\\s*$') }}"
-
+      when: ansible_os_family == "Archlinux"
