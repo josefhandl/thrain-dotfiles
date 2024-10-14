@@ -15,25 +15,35 @@
         state: present
       when: ansible_os_family == "Archlinux"
 
-    - name: Check if the original smb.conf backup exists
+    - name: Check if the original smb.conf exists
+      stat:
+        path: /etc/samba/smb.conf
+      register: is_smb_conf
+
+    - name: Check if the original smb.conf.backup exists
       stat:
         path: /etc/samba/smb.conf.backup
-      register: smb_conf_backup
+      when: is_smb_conf.stat.exists
+      register: is_smb_conf_backup
 
     - name: Backup the original smb.conf if backup does not exist
       copy:
         src: /etc/samba/smb.conf
         dest: /etc/samba/smb.conf.backup
         backup: yes
-      when: not smb_conf_backup.stat.exists
+      when: not is_smb_conf_backup.stat.exists
+      register: backup_smb_conf
 
-    - name: Copy the new smb.conf
+    - name: Copy the smb.conf
       copy:
         src: configs/smb.conf
         dest: /etc/samba/smb.conf
+      when: backup_smb_conf.changed
 
-    - name: Restart Samba service
-      service:
-        name: smbd
+    - name: Enable and restart Samba service
+      systemd_service:
+        name: smb
+        enabled: true
         state: restarted
+      when: backup_smb_conf.changed
 
