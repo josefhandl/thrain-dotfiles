@@ -56,6 +56,9 @@ gqrx
 # Logic analyzer (Sigrok)
 pulseview
 
+# Photo CLI tools
+perl-image-exiftool
+
 # GUI applications
 vlc
 okular

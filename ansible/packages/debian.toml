@@ -58,6 +58,9 @@ gqrx-sdr
 # Logic analyzer
 sigrok
 
+# Photo CLI tools
+exiftool
+
 # GUI applications
 vlc
 okular
