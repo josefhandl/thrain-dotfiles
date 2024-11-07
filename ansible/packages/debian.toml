@@ -34,6 +34,9 @@ ocl-icd-opencl-dev
 opencl-clhpp-headers
 mesa-opencl-icd
 
+# Cloud clients
+python3-openstackclient
+
 # Diag/useful tools
 neofetch
 mesa-utils

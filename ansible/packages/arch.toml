@@ -33,6 +33,9 @@ clang
 opencl-icd-loader
 opencl-headers
 
+# Cloud clients
+python-openstackclient
+
 # Diag/useful tools
 neofetch
 mesa-demos
