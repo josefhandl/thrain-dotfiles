@@ -63,6 +63,7 @@ pulseview
 perl-image-exiftool
 
 # GUI applications
+virt-manager
 vlc
 okular
 chromium
