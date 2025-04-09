@@ -6,7 +6,7 @@
   tasks:
   - name: Install required packages (Debian family)
     apt:
-      name: ['libpam-u2f', 'pamu2fcfg']
+      name: ['libpam-u2f', 'pamu2fcfg', 'yubikey-manager']
       state: present
     when: ansible_os_family == "Debian"
 
@@ -30,3 +30,9 @@
       insertafter: '^.*PAM.*$'
       firstmatch: yes
 
+## Required for `ykman` for Yubikey OpenPGP application. There could be a collision with `gpg` package
+#  - name: Ensure pcscd service is enabled and started
+#    systemd_service:
+#      name: pcscd
+#      enabled: true
+#      state: restarted
