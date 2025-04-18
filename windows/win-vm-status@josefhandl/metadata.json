@@ -1,0 +1,9 @@
+{
+    "uuid": "win-vm-status@josefhandl",
+    "name": "VM Status",
+    "description": "Displays the status of a specific VM in the top panel.",
+    "version": 1,
+    "shell-version": ["47", "48"],
+    "url": "https://github.com/josefhandl"
+}
+
