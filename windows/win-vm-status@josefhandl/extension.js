@@ -80,7 +80,7 @@ var VMStatusIndicator = GObject.registerClass(
 
             // "Save VM" button
             let saveItem = new PopupMenu.PopupImageMenuItem("Save VM", "media-playback-pause-symbolic");
-            saveItem.connect("activate", () => this._startVM());
+            saveItem.connect("activate", () => this._saveVM());
             this.menu.addMenuItem(saveItem);
 
             // "Stop VM" button
